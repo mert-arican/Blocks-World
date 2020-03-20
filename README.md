@@ -4,8 +4,8 @@ This program is intended to be a replica of the program that shown in MIT OCW 6.
 approach in this program is naive, but main subject of this project is using goal trees to write a program that answers 
 questions about it's own behavior, not natural language processing. Thanks a lot MIT OCW!
 
-![IMG_2008](https://user-images.githubusercontent.com/45623751/77179634-c859d780-6ad9-11ea-823c-5bde455ac2df.PNG)
+<img width="400" alt="Screen Shot 2020-03-21 at 00 22 30" src="https://user-images.githubusercontent.com/45623751/77179634-c859d780-6ad9-11ea-823c-5bde455ac2df.PNG"> 
 
-![IMG_2009](https://user-images.githubusercontent.com/45623751/77179640-cabc3180-6ad9-11ea-8958-d48925ffbd36.PNG)
+<img width="400" alt="Screen Shot 2020-03-21 at 00 22 30" src="https://user-images.githubusercontent.com/45623751/77179640-cabc3180-6ad9-11ea-8958-d48925ffbd36.PNG"> 
 
-![IMG_2010](https://user-images.githubusercontent.com/45623751/77179647-cbed5e80-6ad9-11ea-9ce8-798a29256b42.PNG)
+<img width="400" alt="Screen Shot 2020-03-21 at 00 22 30" src="https://user-images.githubusercontent.com/45623751/77179647-cbed5e80-6ad9-11ea-9ce8-798a29256b42.PNG">
