@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blocks World View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BlocksWorldViewController" customModule="Blocks_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yy-oQ-XN1">
+                                <rect key="frame" x="89.666666666666686" y="335" width="716.66666666666652" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LFZ-Ro-fzo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="716.66666666666652" placeholderIntrinsicHeight="251" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVk-fB-upK">
+                                <rect key="frame" x="89.666666666666686" y="76" width="716.66666666666652" height="251"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="5dj-Ep-G9s"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oGx-R4-PJx"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Dp-nh2">
+                                <rect key="frame" x="89.666666666666686" y="8" width="716.66666666666652" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Konuş" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Kn-sN-2si">
+                                        <rect key="frame" x="0.0" y="0.0" width="648.66666666666663" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkQ-Fe-MuA">
+                                        <rect key="frame" x="656.66666666666674" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bkQ-Fe-MuA" secondAttribute="height" multiplier="1:1" id="XwC-dE-6yy"/>
+                                            <constraint firstAttribute="height" constant="60" id="qC9-yN-eXN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Ask"/>
+                                        <connections>
+                                            <action selector="sor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDC-5u-ajL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Yy-oQ-XN1" firstAttribute="top" secondItem="aVk-fB-upK" secondAttribute="bottom" constant="8" symbolic="YES" id="CBn-eH-8hf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Yy-oQ-XN1" secondAttribute="bottom" constant="8" id="Ed0-kE-8no"/>
+                            <constraint firstItem="aVk-fB-upK" firstAttribute="width" secondItem="Is9-Dp-nh2" secondAttribute="width" id="GXx-TF-SUQ"/>
+                            <constraint firstItem="aVk-fB-upK" firstAttribute="top" secondItem="Is9-Dp-nh2" secondAttribute="bottom" constant="8" symbolic="YES" id="NDc-i6-cD4"/>
+                            <constraint firstItem="aVk-fB-upK" firstAttribute="leading" secondItem="Is9-Dp-nh2" secondAttribute="leading" id="R2B-xa-RJr"/>
+                            <constraint firstItem="Is9-Dp-nh2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Rhi-M0-hg8"/>
+                            <constraint firstItem="aVk-fB-upK" firstAttribute="width" secondItem="2Yy-oQ-XN1" secondAttribute="width" id="cJT-O6-p6y"/>
+                            <constraint firstItem="2Yy-oQ-XN1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="n3a-bP-mA6"/>
+                            <constraint firstItem="aVk-fB-upK" firstAttribute="leading" secondItem="2Yy-oQ-XN1" secondAttribute="leading" id="qZl-Ys-Hut"/>
+                            <constraint firstItem="2Yy-oQ-XN1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sOy-Bj-ba7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="aVk-fB-upK" id="5WP-hE-PFB"/>
+                        <outlet property="table" destination="2Yy-oQ-XN1" id="tb2-Xc-Vaf"/>
+                        <outlet property="textField" destination="8Kn-sN-2si" id="RK2-SJ-yV9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.60714285714286" y="115.94202898550725"/>
+        </scene>
+    </scenes>
+</document>
