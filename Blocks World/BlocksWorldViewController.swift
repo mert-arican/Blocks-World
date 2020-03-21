@@ -23,10 +23,10 @@ class BlocksWorldViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func a(b: UILabel){
-        b.sizeToFit()
-        b.bounds.size = CGSize(width: b.bounds.size.width, height: b.bounds.size.height)
-        scrollView.contentSize = CGSize(width: 0.0, height: b.bounds.size.height+(self.scrollView.bounds.height - 2*k))
+    func updateLabel(label: UILabel){
+        label.sizeToFit()
+        label.bounds.size = CGSize(width: label.bounds.size.width, height: label.bounds.size.height)
+        scrollView.contentSize = CGSize(width: 0.0, height: label.bounds.size.height+(self.scrollView.bounds.height - 2*k))
         let bottomOffset = CGPoint(x: 0.0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
            scrollView.setContentOffset(bottomOffset, animated: false)
     }
@@ -88,7 +88,7 @@ class BlocksWorldViewController: UIViewController, UITextFieldDelegate {
         try? audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
         try? audioSession.setMode(AVAudioSession.Mode.spokenAudio)
         hear.text = ""
-        a(b: hear)
+        updateLabel(label: hear)
         drawBlocks()
     }
     
@@ -206,7 +206,7 @@ extension BlocksWorldViewController {
         if speech.count == 1 && speech[0].lowercased() == "pile" { pile() ; return }
         guard speech.count >= 2 else { return }
         hear.text! += "\nA: " + textField.text!
-        a(b: hear)
+        updateLabel(label: hear)
         var arguments: [String] = [] ; var index = 0
         for word in speech {
             let word = word.lowercased()
@@ -241,7 +241,7 @@ extension BlocksWorldViewController {
                 hear.text! += message
                 message.removeFirst(3)
                 speak(text: message)
-                self.a(b: hear); return
+                self.updateLabel(label: hear); return
             }
         }
         //        print("#########")
@@ -269,7 +269,7 @@ extension BlocksWorldViewController {
                 print(actions[ind-1], "YYY");
                 speak(text: actions[ind-1])
                 hear.text! += "\nB: " + actions[ind-1]
-                a(b: hear)
+                updateLabel(label: hear)
             }
         } else {
             print("YAYy", arguments)
